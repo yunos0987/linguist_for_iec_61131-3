@@ -287,6 +287,7 @@ This is a list of grammars that Linguist selects to provide syntax highlighting 
 - **Hurl:** [nikeee/language-hurl](https://github.com/nikeee/language-hurl)
 - **Hy:** [tshakalekholoane/vscode-hy](https://github.com/tshakalekholoane/vscode-hy)
 - **IDL:** [mgalloy/idl.tmbundle](https://github.com/mgalloy/idl.tmbundle)
+- **IEC 61131-3:** [yunos0987/vscode-iec-61131-3-lang](https://github.com/yunos0987/vscode-iec-61131-3-lang)
 - **IGOR Pro:** [byte-physics/language-igor](https://github.com/byte-physics/language-igor)
 - **IL Assembly:** [mg0x7BE/il-assembly-grammar](https://github.com/mg0x7BE/il-assembly-grammar)
 - **INI:** [textmate/ini.tmbundle](https://github.com/textmate/ini.tmbundle)
