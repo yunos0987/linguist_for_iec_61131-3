@@ -3357,18 +3357,6 @@ IDL:
   codemirror_mode: idl
   codemirror_mime_type: text/x-idl
   language_id: 161
-IEC 61131-3:
-  type: programming
-  color: "#CF5300"
-  extensions:
-  - ".iec"
-  - ".iecst"
-  aliases:
-  - iec61131-3
-  - iecst
-  tm_scope: source.iec-61131-3
-  ace_mode: text
-  language_id: 829530638
 IGOR Pro:
   type: programming
   color: "#0000cc"
@@ -7851,6 +7839,19 @@ StringTemplate:
   codemirror_mode: htmlmixed
   codemirror_mime_type: text/html
   language_id: 89855901
+Structured Text:
+  type: programming
+  color: "#CF5300"
+  extensions:
+  - ".st"
+  - ".iec"
+  - ".iecst"
+  aliases:
+  - iec61131-3
+  - iecst
+  tm_scope: source.iec-61131-3
+  ace_mode: text
+  language_id: 365593777
 Stylus:
   type: markup
   color: "#ff6347"

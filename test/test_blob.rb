@@ -277,11 +277,6 @@ class TestBlob < Minitest::Test
     assert sample_blob("Go/testdata/foo.yml").vendored?
   end
 
-  def test_iec_61131_3_detection
-    assert_equal "IEC 61131-3", sample_blob_memory("IEC 61131-3/blinker.iec").language.name
-    assert_equal "IEC 61131-3", sample_blob_memory("IEC 61131-3/pid_controller.iecst").language.name
-  end
-
   def test_language
     # Failures are reasonable in some cases, such as when a file is fully valid in more than one language.
     allowed_failures = {
