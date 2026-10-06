@@ -7839,6 +7839,19 @@ StringTemplate:
   codemirror_mode: htmlmixed
   codemirror_mime_type: text/html
   language_id: 89855901
+Structured Text:
+  type: programming
+  color: "#CF5300"
+  extensions:
+  - ".st"
+  - ".iec"
+  - ".iecst"
+  aliases:
+  - iec61131-3
+  - iecst
+  tm_scope: source.iec-61131-3
+  ace_mode: text
+  language_id: 365593777
 Stylus:
   type: markup
   color: "#ff6347"

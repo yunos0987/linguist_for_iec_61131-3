@@ -632,6 +632,7 @@ This is a list of grammars that Linguist selects to provide syntax highlighting 
 - **Starlark:** [MagicStack/MagicPython](https://github.com/MagicStack/MagicPython)
 - **Stata:** [pschumm/Stata.tmbundle](https://github.com/pschumm/Stata.tmbundle)
 - **StringTemplate:** [Alhadis/language-etc](https://github.com/Alhadis/language-etc)
+- **Structured Text:** [yunos0987/vscode-iec-61131-3-lang](https://github.com/yunos0987/vscode-iec-61131-3-lang)
 - **Stylus:** [billymoon/Stylus](https://github.com/billymoon/Stylus)
 - **SubRip Text:** [Alhadis/language-subtitles](https://github.com/Alhadis/language-subtitles)
 - **SugarSS:** [hudochenkov/Syntax-highlighting-for-PostCSS](https://github.com/hudochenkov/Syntax-highlighting-for-PostCSS)

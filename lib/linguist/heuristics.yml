@@ -994,6 +994,8 @@ disambiguations:
       - negative_pattern: '^\s*[^\s@#\w-]'
 - extensions: ['.st']
   rules:
+  - language: Structured Text
+    pattern: '(?i)^[ \t]*END_(?:ACTION|CASE|CONFIGURATION|FOR|FUNCTION|FUNCTION_BLOCK|IF|INTERFACE|METHOD|PROGRAM|PROPERTY|REPEAT|RESOURCE|STRUCT|TYPE|VAR|WHILE)\b'
   - language: StringTemplate
     pattern: '\$\w+[($]|.!\s*.+?\s*!.|<!\s*.+?\s*!>|\[!\s*.+?\s*!\]|\{!\s*.+?\s*!\}'
   - language: Smalltalk

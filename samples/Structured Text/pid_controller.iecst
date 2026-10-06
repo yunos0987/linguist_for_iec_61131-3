@@ -1,0 +1,76 @@
+// pid_controller.iecst — IEC 61131-3 Structured Text: PID controller example
+
+type
+    PidParams : struct
+        Kp       : lreal;
+        Ki       : lreal;
+        Kd       : lreal;
+        OutMin   : lreal := -100.0;
+        OutMax   : lreal :=  100.0;
+    end_struct;
+end_type
+
+function_block PidController
+var_input
+    Enable      : bool;
+    Setpoint    : lreal;
+    ProcessVar  : lreal;
+    Params      : PidParams;
+    CycleTime   : time := t#10ms;
+end_var
+var_output
+    Output      : lreal;
+    Error       : lreal;
+end_var
+var
+    _integral   : lreal;
+    _prevError  : lreal;
+    _dt         : lreal;
+end_var
+
+if not Enable then
+    Output    := 0.0;
+    _integral := 0.0;
+    _prevError := 0.0;
+    return;
+end_if;
+
+_dt    := lreal#TIME_TO_LREAL(CycleTime) / 1000.0;
+Error  := Setpoint - ProcessVar;
+
+_integral := _integral + Error * _dt;
+
+// anti-windup: clamp integral contribution
+if Params.Ki <> 0.0 then
+    _integral := limit(_integral, Params.OutMin / Params.Ki, Params.OutMax / Params.Ki);
+end_if;
+
+Output := Params.Kp * Error
+        + Params.Ki * _integral
+        + Params.Kd * (Error - _prevError) / _dt;
+
+Output     := limit(Output, Params.OutMin, Params.OutMax);
+_prevError := Error;
+
+end_function_block
+
+program TemperatureControl
+var
+    pid      : PidController;
+    params   : PidParams := (Kp := 2.5, Ki := 0.1, Kd := 0.05);
+    setpoint : lreal := 75.0;
+    measured : lreal at %IW0;
+    heater   : lreal at %QW0;
+end_var
+
+pid(
+    Enable     := true,
+    Setpoint   := setpoint,
+    ProcessVar := measured,
+    Params     := params,
+    CycleTime  := t#10ms
+);
+
+heater := pid.Output;
+
+end_program

@@ -1506,6 +1506,9 @@
 [submodule "vendor/grammars/vscode-ibmi-languages"]
 	path = vendor/grammars/vscode-ibmi-languages
 	url = https://github.com/barrettotte/vscode-ibmi-languages
+[submodule "vendor/grammars/vscode-iec-61131-3-lang"]
+	path = vendor/grammars/vscode-iec-61131-3-lang
+	url = https://github.com/yunos0987/vscode-iec-61131-3-lang
 [submodule "vendor/grammars/vscode-janet"]
 	path = vendor/grammars/vscode-janet
 	url = https://github.com/janet-lang/vscode-janet.git
